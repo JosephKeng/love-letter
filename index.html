@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日子突然不一样了</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 替换为国内CDN，解决境外资源加载失败问题 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',   // 主色：温柔天蓝色
+                        secondary: '#7AB8F5', // 辅助色：浅蓝
+                        accent: '#E8F4FF',    // 背景色：极浅蓝
+                    },
+                    fontFamily: {
+                        sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 0.6s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+            .memory-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                opacity: 0;
+            }
+            .memory-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(74, 144, 226, 0.3);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-white to-accent/20 scroll-smooth">
+
+<!-- 顶部封面 -->
+<section class="min-h-screen flex flex-col justify-center items-center px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-[clamp(2.5rem,8vw,4rem)] font-bold text-primary mb-6 text-shadow">
+           日子突然不一样了
+        </h1>
+        <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+            从遇见你的那一天开始，<br>
+            好像普通的日子也变得有一点特别。<br>
+            于是我偷偷收藏起来了这些瞬间。<br>
+            Let's have a look！
+        </p>
+        <a href="#memory-1" class="inline-block animate-bounce">
+            <i class="fa fa-chevron-down text-3xl text-primary/70"></i>
+        </a>
+    </div>
+</section>
+
+<!-- 回忆部分 1-12-->
+<section id="memory-1" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo1.jpg" alt="回忆1" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">阳光很好的骑行</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    在滨江跑道从散步到骑行，喝咖啡，躲避美好的阳光，毕竟真的太晒了有没有
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-2" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo2.jpg" alt="回忆2" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">共青森林公园</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    共青真的很漂亮，阳光贼好，树木倒映在水里像是油画，咱们拿起手机咔咔一顿拍照
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-3" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo3.jpg" alt="回忆3" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">开始划船</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    第一次开船就开的如此之好，是有驾驶天赋来的，在船上带上耳机，一起听歌
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-4" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo4.jpg" alt="回忆4" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">探索商场</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    吃了很好吃的韩料，一起体验DJI，这个自拍真的很可爱有没有
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-5" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo5.jpg" alt="回忆5" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">吃吃吃</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    第一次来吃fine dining，看到了一对草坪婚礼，当然，是谁这么好看我不说
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-6" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo6.jpg" alt="回忆6" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">Watch movie</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    A king、a man……在史诗故事的下面，有两个叽叽喳喳的人
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-7" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo7.jpg" alt="回忆7" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">鼎泰丰</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    吃到了心心念念的红油抄手，一起闲聊与chat
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-8" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo8.jpg" alt="回忆8" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">火锅</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    山缓缓好吃！水雾浮上来，好像什么都看不见了，捂眼睛
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-9" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo9.jpg" alt="回忆9" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">大桥</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    吃了超级好吃的泰料打抛饭，来到了江边看风景，
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-10" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo10.jpg" alt="回忆10" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">心心念念的海胆</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    大侦探福尔摩超一下就找到了藏在花瓶背后的取号，并且在外面呆了一会儿就成功进来了！
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-11" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo11.jpg" alt="回忆11" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">国庆加班日</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    谁能想到咱俩国庆还来一起加班啊！甲鱼汤浇饭真的好好吃，有品！跟着超超总是能吃到各种好吃的(*^▽^*)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="memory-12" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="memory-card bg-white rounded-2xl overflow-hidden shadow-lg mb-20">
+            <img src="images/photo12.jpg" alt="回忆12" class="w-full h-auto object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">起飞</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    美好的日子怎么就戛然而止了呢，含泪送上飞机。正所谓小别胜新婚，不见面的日子把思念拉的更长更有韧性
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 最终选择部分 -->
+<section class="min-h-screen flex flex-col justify-center items-center px-4 text-center py-20">
+    <div class="max-w-2xl mx-auto bg-white rounded-2xl p-10 shadow-xl">
+        <h2 class="text-3xl font-bold text-primary mb-8">那么，现在是超超的抉择时刻！</h2>
+        <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+            未来的路确实很长<br>
+            会有不少挫折和考验<br>
+            但我想和你一起走下去<br>
+            一起在阳光很好的天气出门/听歌/运动/聊天/观影...<br>
+            还有无数想要尝试的东西！<br>
+            一起去创造更多的经历和回忆<br>
+            成为更好的我们，一起开开心心地过下去<br>
+            现在，轮到超超做出选择了<br>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <button id="btn-yes" class="px-10 py-4 bg-primary text-white text-xl font-bold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                我想和你一起走下去
+            </button>
+            <button id="btn-no" class="px-10 py-4 bg-gray-200 text-gray-700 text-xl font-bold rounded-full hover:bg-gray-300 transition-all duration-300 shadow-lg hover:shadow-xl">
+                让我再考虑一下
+            </button>
+        </div>
+
+        <div id="thank-you" class="hidden mt-10 text-xl text-gray-600">
+            <i class="fa fa-heart text-primary text-3xl mb-4"></i>
+            <p>谢谢你的回答，我已经收到了（手动自嘲熊.jpg）</p>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="py-8 text-center text-gray-500">
+    <p>Made by Joseph</p>
+</footer>
+
+<script>
+    const btnYes = document.getElementById('btn-yes');
+    const btnNo = document.getElementById('btn-no');
+    const thankYou = document.getElementById('thank-you');
+
+    // 替换成你自己的 Server 酱 SendKey
+    const SERVER_CHAN_KEY = 'SCT433552Tom13Ik5zZkM4ywGygX9WxITs';
+
+    // 提交答案：调用Server酱接口推送微信消息
+    function submitAnswer(val) {
+        // 禁用按钮防止重复点击
+        btnYes.disabled = true;
+        btnNo.disabled = true;
+
+        const submitTime = new Date().toLocaleString('zh-CN');
+        // 消息标题和内容
+        const title = '收到新的选择反馈啦';
+        const desp = `选择结果：${val}\n提交时间：${submitTime}`;
+
+        // 调用Server酱接口
+        fetch(`https://sctapi.ftqq.com/${SERVER_CHAN_KEY}.send?title=${encodeURIComponent(title)}&desp=${encodeURIComponent(desp)}`, {
+            method: 'GET',
+            mode: 'no-cors' // 兼容跨域，保证消息能发出去
+        }).finally(() => {
+            // 不管成功失败都显示感谢，不影响用户体验
+            setTimeout(() => {
+                thankYou.classList.remove('hidden');
+            }, 500);
+        });
+    }
+
+    btnYes.addEventListener('click', () => submitAnswer('我想和你一起走下去'));
+    btnNo.addEventListener('click', () => submitAnswer('让我再考虑一下'));
+
+    // 滚动渐入动画
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('animate-fadeIn'));
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.memory-card').forEach(card => observer.observe(card));
+</script>
+</body>
+</html>
